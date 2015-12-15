@@ -5,17 +5,13 @@ def makeTimeTable():
   timetable = []
   i = 0
   while i < 3:
-    j = 0
     tmp_table = []
     print("%d 時間目" % (int(i)+1))
     print("Enter the name of student(Put blank for no student)")
-    while j < 6:
-      #todo: カンマで自動分割するようにする
-      print(":")
-      input_name = raw_input()
-      tmp_table.append(input_name)
-      j = j + 1
-    timetable.append(tmp_table)
+    print(":")
+    name_string = raw_input()
+    name_array = name_string.split(",")
+    timetable.append(name_array)
     i = i + 1
   print(timetable)
   return timetable
