@@ -39,7 +39,8 @@ def scrutinizeTimeTable(timetable):
         timetable[i+1].pop(timetable[i+1].index(l))
     result.append(dub)
   result.append(timetable[i+1])
-  return result
+  
+  return [flatten for inner in result for flatten in inner]
 
 def main():
   time_table = makeTimeTable()
